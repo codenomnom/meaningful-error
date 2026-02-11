@@ -1,4 +1,6 @@
 ---
+import { Font } from 'astro:assets';
+
 interface Props {
   title: string;
   description: string;
@@ -22,6 +24,9 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <ThemeManager defaultTheme="auto" />
+    <Font cssVariable="--font-crimson-pro" preload />
+    <Font cssVariable="--font-vollkorn" preload />
+    <!-- titleTemplate="%s :: Andrey" -->
     <SEO
       title={title}
       description={description}
