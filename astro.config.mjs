@@ -8,7 +8,7 @@ import robotsTxt from 'astro-robots-txt'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-full-starter.pages.dev/',
+  site: process.env.SITE_URL,
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
