@@ -1,17 +1,19 @@
 ---
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { title, description } = Astro.props
-import '@fontsource/geist-mono'
-import '@/styles/global.css'
-import { ClientRouter } from 'astro:transitions'
-import { SEO } from 'astro-seo'
-import { getLangFromUrl } from '@/i18n/utils'
+const { title, description } = Astro.props;
+import '@fontsource/geist-mono';
+import '@/styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import { SEO } from 'astro-seo';
+import { getLangFromUrl } from '@/i18n/utils';
+import ThemeManager from '@/components/ThemeManager.astro';
+import ThemeSelector from '@/components/ThemeSelector.astro';
 
-const lang = getLangFromUrl(Astro.url)
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
@@ -19,9 +21,9 @@ const lang = getLangFromUrl(Astro.url)
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <ThemeManager defaultTheme="auto" />
     <SEO
       title={title}
-      titleTemplate="%s :: Coke Posada"
       description={description}
       canonical={Astro.url.toString()}
       openGraph={{
@@ -48,6 +50,7 @@ const lang = getLangFromUrl(Astro.url)
     <ClientRouter />
   </head>
   <body>
+    <ThemeSelector />
     <slot />
   </body>
 </html>
