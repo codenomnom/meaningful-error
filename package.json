@@ -1,9 +1,9 @@
 {
-  "name": "astro-full-starter",
-  "description": "Astro project to start building your website ASAP.",
+  "name": "meaningful-errors",
+  "description": "A manifesto for the beautifully broken. Because \"Internal Server Error\" is just a lack of imagination.",
   "type": "module",
   "version": "1.0.3",
-  "license": "MIT",
+  "license": "CC BY-NC-ND 4.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

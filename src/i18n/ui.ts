@@ -9,7 +9,7 @@ export const ui = {
   en: {
     'change-language': 'Change language',
     home: {
-      title: 'Astro Full Starter',
+      title: 'Meaningful Error',
       description: 'Boilerplate to start building your website ASAP',
       content: {
         '1': {
